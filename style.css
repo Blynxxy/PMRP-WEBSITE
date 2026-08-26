@@ -49,11 +49,11 @@ body {
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    background-image: url('logo.png');
+    background-image: url('./logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.4; /* Set to 0.4 so you can see it clearly. Change back to 0.05 later if you want it fainter! */
+    opacity: 0.5; /* Kept high so you can see it instantly */
     z-index: -1;
     pointer-events: none;
 }
