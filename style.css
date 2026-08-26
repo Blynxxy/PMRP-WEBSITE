@@ -2,7 +2,7 @@
     --primary-blue: #0052cc;
     --light-blue: #38bdf8;
     --dark-bg: #0b0f19;
-    --card-bg: rgba(17, 24, 39, 0.7);
+    --card-bg: rgba(17, 24, 39, 0.75);
     --text-main: #f3f4f6;
     --text-muted: #9ca3af;
 }
@@ -29,45 +29,27 @@ body {
 /* Background ambient light effects */
 .glow-bg {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
-    filter: blur(140px);
-    border-radius: 50%;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -2;
-    opacity: 0.25;
-}
-
-/* Background Logo Watermark */
-.bg-logo {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    background-image: url('./logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.5; /* Kept high so you can see it instantly */
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+    filter: blur(160px);
+    border-radius: 50%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -1;
-    pointer-events: none;
+    opacity: 0.2;
 }
 
 .container {
     width: 100%;
-    max-width: 700px;
-    padding: 40px 20px;
+    max-width: 850px;
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: auto;
-    z-index: 1;
 }
 
 .hero {
@@ -79,7 +61,7 @@ body {
     background: rgba(56, 189, 248, 0.1);
     color: var(--light-blue);
     border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 6px 14px;
+    padding: 6px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
@@ -89,10 +71,10 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: -0.5px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 h1 span {
@@ -100,24 +82,69 @@ h1 span {
 }
 
 .server-tagline {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+/* Features Grid Styling */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 22px 18px;
+    border-radius: 16px;
+    text-align: left;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.feature-icon {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.feature-card h3 {
     font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.5;
 }
 
+/* About Card Styling */
 .info-card {
     background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
-    padding: 25px;
+    padding: 30px;
     border-radius: 16px;
     margin-bottom: 30px;
     text-align: left;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 
 .info-card h2 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
     color: var(--light-blue);
 }
@@ -128,6 +155,7 @@ h1 span {
     line-height: 1.6;
 }
 
+/* Action Buttons */
 .action-buttons {
     display: flex;
     gap: 15px;
@@ -141,7 +169,7 @@ h1 span {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 14px 28px;
+    padding: 14px 32px;
     border-radius: 10px;
     font-weight: 600;
     font-size: 1rem;
@@ -177,21 +205,20 @@ footer {
     padding: 20px;
     font-size: 0.85rem;
     color: var(--text-muted);
-    z-index: 1;
 }
 
-@media (max-width: 480px) {
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
     .action-buttons {
         flex-direction: column;
     }
     .btn {
         width: 100%;
-    }
-    .bg-logo {
-        width: 300px;
-        height: 300px;
     }
 }
