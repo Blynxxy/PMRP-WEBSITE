@@ -1,4 +1,4 @@
-// PMRP Enhanced Interactive Script
+// PMRP Dashboard Loaded
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Project Manchester RP Website Loaded Successfully.");
+    console.log("Project Manchester RP Interface Active.");
 });
