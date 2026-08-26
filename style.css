@@ -37,8 +37,25 @@ body {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: -2;
     opacity: 0.25;
+}
+
+/* Background Logo Watermark (Make sure your logo file is named logo.png or update the name below) */
+.bg-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-image: url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05; /* Subtle background watermark effect */
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container {
@@ -50,6 +67,7 @@ body {
     align-items: center;
     text-align: center;
     margin: auto;
+    z-index: 1;
 }
 
 .hero {
@@ -159,6 +177,7 @@ footer {
     padding: 20px;
     font-size: 0.85rem;
     color: var(--text-muted);
+    z-index: 1;
 }
 
 @media (max-width: 480px) {
@@ -170,5 +189,9 @@ footer {
     }
     .btn {
         width: 100%;
+    }
+    .bg-logo {
+        width: 300px;
+        height: 300px;
     }
 }
