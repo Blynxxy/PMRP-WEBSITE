@@ -1,4 +1,4 @@
-// PMRP Client-Side Script
+// PMRP Enhanced Interactive Script
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("PMRP Website Loaded Successfully.");
+    console.log("Project Manchester RP Website Loaded Successfully.");
 });
