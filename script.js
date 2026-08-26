@@ -1,6 +1,12 @@
-const nav = document.getElementById('nav');
-  const menu = document.getElementById('menu');
-  const links = document.getElementById('links');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20));
-  menu.addEventListener('click', () => links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+// PMRP Client-Side Script
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("PMRP Website Loaded Successfully.");
+
+    // Optional: Add smooth tracking or connection handling alerts if needed
+    const connectBtn = document.querySelector(".btn-connect");
+    
+    connectBtn.addEventListener("click", (e) => {
+        // This ensures the browser triggers the FiveM protocol handler smoothly
+        console.log("Attempting to launch FiveM connection...");
+    });
+});
